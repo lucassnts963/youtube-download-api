@@ -2,6 +2,11 @@
 
 API REST para download de video do YouTube
 
+[![GitHub issues](https://img.shields.io/github/issues/lucassnts963/youtube-download-api)](https://github.com/lucassnts963/youtube-download-api/issues)
+[![GitHub forks](https://img.shields.io/github/forks/lucassnts963/youtube-download-api)](https://github.com/lucassnts963/youtube-download-api/network)
+[![GitHub stars](https://img.shields.io/github/stars/lucassnts963/youtube-download-api)](https://github.com/lucassnts963/youtube-download-api/stargazers)
+[![GitHub license](https://img.shields.io/github/license/lucassnts963/youtube-download-api)](https://github.com/lucassnts963/youtube-download-api)
+
 ## Tecnologias
 
 - Node.js
