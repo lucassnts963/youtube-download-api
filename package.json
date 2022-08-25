@@ -1,19 +1,25 @@
 {
-  "name": "youtube-download-service",
+  "name": "youtube-download-api",
   "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/lucassnts963/youtube-download-service.git",
+  "main": "src/infra/http/index.ts",
+  "repository": "https://github.com/lucassnts963/youtube-download-api.git",
   "author": "Lucas Santos",
   "license": "MIT",
-  "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "nodemon src/infra/http/index.ts",
+    "dev": " ./node_modules/.bin/ts-node-dev --respawn --transpile-only src/infra/http/index.ts "
   },
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "ytdl-core": "4.10.0",
+    "ytpl": "^2.3.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "@types/express": "^4.17.13",
+    "@types/node": "^18.7.9",
+    "nodemon": "^2.0.19",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.7.4"
   }
 }
