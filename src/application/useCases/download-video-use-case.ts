@@ -12,7 +12,7 @@ export interface RequestQuery {
 export class DownloadVideoUseCase {
   constructor(private downloadRepository: DownloadRepository) {}
 
-  async execute(req: Request<any, any, any, RequestQuery>, res: Response) {
+  async execute(req: Request<void, void, void, RequestQuery>, res: Response) {
     const { id, quality, qualityLabel } = req.query
 
     const url = `https://www.youtube.com/watch?v=${id}`
