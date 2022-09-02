@@ -1,4 +1,3 @@
-import { Readable } from 'stream'
 import ytdl from 'ytdl-core'
 
 import {
