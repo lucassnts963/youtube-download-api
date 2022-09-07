@@ -24,6 +24,11 @@ export class DownloadController {
     const ytdlDownloadAdapter = new YtdlDownloadAdapter()
     const downloadVideoUseCase = new DownloadVideoUseCase(ytdlDownloadAdapter)
 
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000')
+    res.setHeader('Access-Control-Methods', 'POST, GET')
+    res.setHeader('Access-Control-Allow-Headers', '*')
+    res.setHeader('Access-Control-Max-Age', 86400)
+
     downloadVideoUseCase.execute(req, res)
   }
 

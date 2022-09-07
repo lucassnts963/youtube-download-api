@@ -24,11 +24,16 @@ export class DownloadVideoUseCase {
         qualityLabel,
       })
 
+      res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000')
+      res.setHeader('Access-Control-Methods', 'POST, GET')
+      res.setHeader('Access-Control-Allow-Headers', '*')
+      res.setHeader('Access-Control-Max-Age', 86400)
+
       res.setHeader(
         'Content-Disposition',
         `attachment; filename="${videoDetails.title}.mp4"`
       )
-      //res.setHeader('Content-Type', 'video/mp4')
+      res.setHeader('Content-Type', 'video/mp4')
 
       return video.pipe(res)
     } catch (error) {

@@ -11,8 +11,18 @@ class InfoVideoController {
     res: Response
   ) {
     const { url } = req.query
+    console.log('getInfo: ', url)
+
     try {
       const { videoDetails, formats } = await ytdl.getInfo(url)
+
+      res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000')
+      res.setHeader('Access-Control-Methods', 'POST, GET')
+      res.setHeader('Access-Control-Allow-Headers', '*')
+      res.setHeader('Access-Control-Max-Age', 86400)
+
+      console.log(videoDetails)
+
       return res.status(200).json({ videoDetails, formats })
     } catch (error) {
       return res.status(500).json({
